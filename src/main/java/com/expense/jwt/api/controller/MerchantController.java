@@ -3,23 +3,21 @@ import com.expense.jwt.api.beans.AuthRequest;
 import com.expense.jwt.api.beans.Merchant;
 //import com.expense.jwt.api.entity.User;
 //import com.expense.jwt.api.repository.UserRepository;
-import com.expense.jwt.api.beans.MerchantDetailBean;
 import com.expense.jwt.api.repository.UserRepository;
 import com.expense.jwt.api.service.MerchantService;
 import com.expense.jwt.api.util.JwtUtil;
-import lombok.extern.log4j.Log4j2;
-import org.hibernate.tool.schema.internal.exec.ScriptTargetOutputToFile;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.PostConstruct;
 import java.util.concurrent.ExecutionException;
 
 @RestController
-@Log4j2
+@Slf4j
 public class MerchantController {
-
 
     @Autowired
     private JwtUtil jwtUtil;
@@ -35,8 +33,11 @@ public class MerchantController {
     @GetMapping("/")  // get all merchant
     public String welcome() {
 //        List<User> allUser=repository.findAll();
-//        System.out.println(allUser.toString());
-
+        log.trace("A TRACE Message");
+        log.debug("A DEBUG Message");
+        log.info("An INFO Message");
+        log.warn("A WARN Message");
+        log.error("An ERROR Message");
         return "Welcome to BACKEND API !!";
     }
 
@@ -81,24 +82,39 @@ public class MerchantController {
 
     @GetMapping("/getMerchantDetails")
     public Merchant getMerchantDetails(@RequestParam String name ) throws InterruptedException, ExecutionException{
-        System.out.println("get_merchant------------------->");
-        return merchantService.getMerchantDetails(name);
+        log.info("get_merchant------------------->");
+        Merchant merchant=null;
+        try {
+            merchant=merchantService.getMerchantDetails(name);
+        }catch (Exception ex){
+            log.error(ex.getMessage());
+        }
+        return merchant;
     }
 
     @PostMapping("/createMerchant")
-    public String createMerchant(@RequestBody MerchantDetailBean merchantDetailBean ) throws InterruptedException, ExecutionException {
-        System.out.println("create_merchant------------------->");
-        log.trace("create_merchant------------------->");
-        System.out.println(merchantDetailBean.toString());
-//        return "created Merchant";
-        return merchantService.saveMerchantDetails(merchantDetailBean);
+    public String createMerchant(@RequestBody Merchant merchantDetailBean ) throws InterruptedException, ExecutionException {
+        log.info("create_merchant-------------------> {}",merchantDetailBean.toString());
+        String response="SOMETHING WENT WRONG ..!";
+        try{
+            response=merchantService.saveMerchantDetails(merchantDetailBean);
+        }catch (Exception ex){
+            ex.printStackTrace(System.out);
+        }
+        return response;
     }
 
     @PutMapping("/updateMerchant")
-    public String updateMerchant(@RequestBody Merchant patient  ) throws InterruptedException, ExecutionException {
+    public String updateMerchant(@RequestBody Merchant merchant) throws InterruptedException, ExecutionException {
         System.out.println("update_merchant_Details------------------->");
         log.trace("update_merchant_Details------------------->");
-        return merchantService.updateMerchantDetails(patient);
+        String response="SOMETHING WENT WRONG ..!";
+        try{
+            response=merchantService.updateMerchantDetails(merchant);
+        }catch (Exception ex){
+            ex.printStackTrace(System.out);
+        }
+        return response;
     }
 
     @DeleteMapping("/deleteMerchant")

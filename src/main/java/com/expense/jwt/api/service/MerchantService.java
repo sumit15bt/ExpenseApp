@@ -1,8 +1,6 @@
 package com.expense.jwt.api.service;
 
-import com.expense.jwt.api.beans.BankAccount;
 import com.expense.jwt.api.beans.Merchant;
-import com.expense.jwt.api.beans.MerchantDetailBean;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
 import com.google.cloud.firestore.DocumentSnapshot;
@@ -19,60 +17,59 @@ import java.util.concurrent.ExecutionException;
 @Log4j2
 public class MerchantService {
 
-    public static final String COL_NAME="Merchant";
+    public static final String COL_NAME="ALLMerchants";
 
-    public String saveMerchantDetails(MerchantDetailBean merchantDetailBean) throws InterruptedException, ExecutionException {
-        BankAccount merchantAccountDetail=new BankAccount(
-                merchantDetailBean.getAccountHolderName(),
-                merchantDetailBean.getAccountNo(),
-                merchantDetailBean.getBankName(),
-                merchantDetailBean.getIfscCode()
-        );
-        Merchant merchant=new Merchant(
-                String.valueOf(new Date().getTime()),
-                merchantDetailBean.getName(),
-                merchantDetailBean.getPrimaryContactNo(),
-                merchantDetailBean.getSecondaryContactNo(),
-                merchantDetailBean.getGstNo(),
-                merchantDetailBean.getAddress(),
-                merchantDetailBean.getState(),
-                merchantDetailBean.getCityName(),
-                merchantDetailBean.getPinCode(),
-                merchantAccountDetail
-        );
-        merchant.setName(merchant.getName());
-        Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection(COL_NAME).document(merchant.getName()).set(merchant);
-        return collectionsApiFuture.get().getUpdateTime().toString();
+    public String saveMerchantDetails(Merchant merchantDetailBean) throws InterruptedException, ExecutionException {
+        String response="SOMETHING WENT WRONG .!";
+        try{
+            merchantDetailBean.setId(String.valueOf(new Date().getTime()));
+            Firestore dbFirestore = FirestoreClient.getFirestore();
+            ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection(COL_NAME).document(merchantDetailBean.getId()).set(merchantDetailBean);
+            response=collectionsApiFuture.get().getUpdateTime().toString();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return response;
     }
 
-    public Merchant getMerchantDetails(String name) throws InterruptedException, ExecutionException {
-        Firestore dbFirestore = FirestoreClient.getFirestore();
-        DocumentReference documentReference = dbFirestore.collection(COL_NAME).document(name);
-        ApiFuture<DocumentSnapshot> future = documentReference.get();
-
-        DocumentSnapshot document = future.get();
-
+    public Merchant getMerchantDetails(String merchantId) throws InterruptedException, ExecutionException {
         Merchant merchant = null;
-
-        if(document.exists()) {
-            merchant = document.toObject(Merchant.class);
-            return merchant;
-        }else {
-            return null;
+        try{
+            Firestore dbFirestore = FirestoreClient.getFirestore();
+            DocumentReference documentReference = dbFirestore.collection(COL_NAME).document(merchantId);
+            ApiFuture<DocumentSnapshot> future = documentReference.get();
+            DocumentSnapshot document = future.get();
+            if(document.exists()) {
+                merchant = document.toObject(Merchant.class);
+            }
+        }catch (Exception ex){
+            ex.printStackTrace();
         }
+        return merchant;
     }
 
     public String updateMerchantDetails(Merchant merchant) throws InterruptedException, ExecutionException {
-        Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection(COL_NAME).document(merchant.getName()).set(merchant);
-        return collectionsApiFuture.get().getUpdateTime().toString();
+        String response="";
+        try{
+            Firestore dbFirestore = FirestoreClient.getFirestore();
+            ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection(COL_NAME).document(merchant.getId()).set(merchant);
+            response= collectionsApiFuture.get().getUpdateTime().toString();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return response;
     }
 
-    public String deleteMerchant(String merchantName) {
-        Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> writeResult = dbFirestore.collection(COL_NAME).document(merchantName).delete();
-        return "Document with Patient ID "+merchantName+" has been deleted";
+    public String deleteMerchant(String merchantId) {
+        String response="";
+        try{
+            Firestore dbFirestore = FirestoreClient.getFirestore();
+            ApiFuture<WriteResult> writeResult = dbFirestore.collection(COL_NAME).document(merchantId).delete();
+            response= "Document with Patient ID "+merchantId+" has been deleted";
+        }catch (Exception ex){
+           ex.printStackTrace(System.out);
+        }
+        return response;
     }
 
 }

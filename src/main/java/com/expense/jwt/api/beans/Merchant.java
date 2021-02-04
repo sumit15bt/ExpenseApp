@@ -19,5 +19,9 @@ public class Merchant {
     private String state;
     private String cityName;
     private String pinCode;
-    private BankAccount merchantAccount;
+    private String AccountHolderName;
+    private String AccountNo;
+    private String BankName;
+    private String IfscCode;
+
 }
