@@ -1,0 +1,693 @@
+[34m12:02:54.452 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 9935 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:02:54.473 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:02:54.474 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:02:57.115 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:02:57.130 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:02:57.131 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:02:57.258 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:02:57.259 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2654 ms
+[34m12:02:57.391 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:02:58.148 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:02:58.345 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:02:58.882 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a389761, org.springframework.security.web.context.SecurityContextPersistenceFilter@35cd68d4, org.springframework.security.web.header.HeaderWriterFilter@e9dc4d0, org.springframework.security.web.authentication.logout.LogoutFilter@68e7c8c3, com.expense.jwt.api.filter.JwtFilter@69e49a81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@216914, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61af1510, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42714a7, org.springframework.security.web.session.SessionManagementFilter@7d199c68, org.springframework.security.web.access.ExceptionTranslationFilter@3ae9d1e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2418ba04]
+[34m12:02:59.077 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:02:59.481 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:02:59.487 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 6.415 seconds (JVM running for 7.631)
+[34m12:04:27.028 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m12:04:27.029 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m12:04:27.047 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 16 ms
+[39m12:04:27.177 [http-nio-8085-exec-1] TRACE c.e.j.a.c.MerchantController:38[0;39m - A TRACE Message
+[39m12:04:27.178 [http-nio-8085-exec-1] DEBUG c.e.j.a.c.MerchantController:39[0;39m - A DEBUG Message
+[34m12:04:27.179 [http-nio-8085-exec-1] INFO  c.e.j.a.c.MerchantController:40[0;39m - An INFO Message
+[31m12:04:27.179 [http-nio-8085-exec-1] WARN  c.e.j.a.c.MerchantController:41[0;39m - A WARN Message
+[1;31m12:04:27.180 [http-nio-8085-exec-1] ERROR c.e.j.a.c.MerchantController:42[0;39m - An ERROR Message
+[39m12:05:05.919 [http-nio-8085-exec-3] TRACE c.e.j.a.c.MerchantController:55[0;39m - ----------------authenticate------------------
+[34m12:05:05.943 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:05:06.042 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:05:06.043 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:05:38.456 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:05:38.503 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:05:38.504 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:05:38.509 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:05:38.510 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:05:38.515 [http-nio-8085-exec-2] INFO  c.e.j.a.c.MerchantController:94[0;39m - getAllMerchantANDServices-------------------> {} 
+[34m12:06:39.559 [http-nio-8085-exec-6] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:06:39.561 [http-nio-8085-exec-6] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:06:39.561 [http-nio-8085-exec-6] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:06:39.569 [http-nio-8085-exec-6] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:06:39.570 [http-nio-8085-exec-6] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:06:39.576 [http-nio-8085-exec-6] INFO  c.e.j.a.c.MerchantServicesController:84[0;39m - --------------/deleteExpense-----------
+[39m12:06:39.718 [http-nio-8085-exec-6] TRACE c.e.j.a.c.MerchantServicesController:91[0;39m - [{"name":"test_merchant_service","merchantname":"test_merchant","price":"300000000","tax_gst_percentage":"23.5","description":"description avi avi","otherdetails":"otherdetails---","entrydate":"2021-02-06 23:10:56.18","lastupdated":"2021-02-06 23:44:09.737"},{"name":"CALLING","merchantname":"test_merchant","price":"300000000","tax_gst_percentage":"23.5","description":"description avi avi","otherdetails":"otherdetails---","entrydate":"2021-02-07 00:26:09.925"}]
+[34m12:07:05.579 [http-nio-8085-exec-7] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:07:05.581 [http-nio-8085-exec-7] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:07:05.581 [http-nio-8085-exec-7] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:07:05.585 [http-nio-8085-exec-7] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:07:05.586 [http-nio-8085-exec-7] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:07:05.591 [http-nio-8085-exec-7] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/deleteExpense-----------
+[39m12:07:05.822 [http-nio-8085-exec-7] TRACE c.e.jwt.api.repository.Expensedao:168[0;39m - 1
+[1;31m12:07:05.828 [http-nio-8085-exec-7] ERROR c.e.jwt.api.repository.Expensedao:138[0;39m - ERROR : null
+[39m12:07:05.829 [http-nio-8085-exec-7] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - []
+[34m12:08:41.806 [http-nio-8085-exec-5] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:08:41.808 [http-nio-8085-exec-5] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:08:41.808 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:08:41.811 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:08:41.811 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[31m12:08:41.833 [http-nio-8085-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:199[0;39m - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: (PushbackInputStream); line: 6, column: 2]]
+[34m12:15:10.390 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:15:10.393 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:15:10.413 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:15:17.754 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 10260 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:15:17.774 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:15:17.775 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:15:20.226 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:15:20.241 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:15:20.241 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:15:20.368 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:15:20.369 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2445 ms
+[34m12:15:20.451 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:15:21.114 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:15:21.271 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:15:21.726 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a9b9909, org.springframework.security.web.context.SecurityContextPersistenceFilter@3531f3ca, org.springframework.security.web.header.HeaderWriterFilter@e8ea697, org.springframework.security.web.authentication.logout.LogoutFilter@670d4d38, com.expense.jwt.api.filter.JwtFilter@4ce14f05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4867ab9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c3a14d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55d9b8f0, org.springframework.security.web.session.SessionManagementFilter@618ad2aa, org.springframework.security.web.access.ExceptionTranslationFilter@5bb51241, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72456279]
+[34m12:15:21.922 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:15:22.336 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:15:22.341 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.988 seconds (JVM running for 6.687)
+[34m12:15:58.163 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m12:15:58.163 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m12:15:58.174 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 11 ms
+[34m12:15:58.205 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:15:58.299 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:15:58.300 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:15:58.370 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:15:58.371 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:15:58.529 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[1;31m12:15:58.819 [http-nio-8085-exec-1] ERROR c.e.jwt.api.repository.Expensedao:81[0;39m - PreparedStatementCallback; bad SQL grammar [SELECT title FROM expense WHERE title=? AND serviceid=? AND merchantid=?]; nested exception is org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying = integer
+  Hint: No operator matches the given name and argument type(s). You might need to add explicit type casts.
+  Position: 73
+[39m12:15:58.820 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - SOMETHING WENT WRONG .!
+[34m12:17:36.140 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:17:36.150 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:17:36.192 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:17:43.103 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 10409 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:17:43.109 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:17:43.111 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:17:45.568 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:17:45.589 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:17:45.590 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:17:45.733 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:17:45.734 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2482 ms
+[34m12:17:45.838 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:17:46.481 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:17:46.649 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:17:47.069 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f139fc9, org.springframework.security.web.context.SecurityContextPersistenceFilter@161f6623, org.springframework.security.web.header.HeaderWriterFilter@81b5db0, org.springframework.security.web.authentication.logout.LogoutFilter@3419e23b, com.expense.jwt.api.filter.JwtFilter@7f572c37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6778aea6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@332820f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55259aa7, org.springframework.security.web.session.SessionManagementFilter@4d8286c4, org.springframework.security.web.access.ExceptionTranslationFilter@ef1695a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a543f31]
+[34m12:17:47.238 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:17:47.596 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:17:47.600 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.791 seconds (JVM running for 6.579)
+[34m12:17:59.173 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m12:17:59.173 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m12:17:59.189 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 16 ms
+[34m12:17:59.221 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:17:59.294 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:17:59.294 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:17:59.349 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:17:59.350 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:17:59.499 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[1;31m12:17:59.677 [http-nio-8085-exec-1] ERROR c.e.jwt.api.repository.Expensedao:82[0;39m - PreparedStatementCallback; bad SQL grammar [INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (?, ?, ?, ?, ?,  ?,?,? ? ?, ?)]; nested exception is org.postgresql.util.PSQLException: ERROR: syntax error at or near "$9"
+  Position: 234
+[39m12:17:59.678 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - SOMETHING WENT WRONG .!
+[34m12:37:58.905 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:37:58.906 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:37:58.906 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:37:58.909 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:37:58.909 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:37:58.914 [http-nio-8085-exec-3] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[1;31m12:37:58.924 [http-nio-8085-exec-3] ERROR c.e.jwt.api.repository.Expensedao:82[0;39m - PreparedStatementCallback; bad SQL grammar [INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (?, ?, ?, ?, ?,  ?,?,? ? ?, ?)]; nested exception is org.postgresql.util.PSQLException: ERROR: syntax error at or near "$9"
+  Position: 234
+[39m12:37:58.925 [http-nio-8085-exec-3] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - SOMETHING WENT WRONG .!
+[34m12:38:53.711 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:38:53.713 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:38:53.739 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:39:00.781 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 10947 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:39:00.787 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:39:00.790 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:39:03.596 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:39:03.613 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:39:03.613 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:39:03.745 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:39:03.746 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2747 ms
+[34m12:39:03.834 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:39:04.590 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:39:04.799 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:39:05.220 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dd7796b, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d1f1ff5, org.springframework.security.web.header.HeaderWriterFilter@5e671e20, org.springframework.security.web.authentication.logout.LogoutFilter@2903c6ff, com.expense.jwt.api.filter.JwtFilter@65a5d4f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c2fb9dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41522537, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67a3bd51, org.springframework.security.web.session.SessionManagementFilter@6fd12c5, org.springframework.security.web.access.ExceptionTranslationFilter@59e43e8c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3419e23b]
+[34m12:39:05.406 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:39:05.764 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:39:05.771 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 6.222 seconds (JVM running for 6.943)
+[34m12:39:14.141 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m12:39:14.142 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m12:39:14.155 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 13 ms
+[34m12:39:14.186 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:39:14.280 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:39:14.281 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:39:14.349 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:39:14.350 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:39:14.539 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[34m12:39:14.582 [http-nio-8085-exec-1] INFO  c.e.jwt.api.repository.Expensedao:76[0;39m - INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid :paymentrefnumber :expensedate, :expenseentrydate)
+[39m12:39:14.584 [http-nio-8085-exec-1] DEBUG c.e.jwt.api.repository.Expensedao:77[0;39m - MapSqlParameterSource {title=expenseTitle, serviceid=2, merchantId=3, paymenttype=cash, cost=null, selectpaymentmode=UPI, amountpaid=5000, balancelefttopaid=2000, paymentrefnumber=XYZABC, expensedate=Mon Feb 01 00:00:00 IST 2021 (type:TIMESTAMP), expenseentrydate=Sat Feb 13 00:00:00 IST 2021 (type:TIMESTAMP)}
+[1;31m12:39:14.751 [http-nio-8085-exec-1] ERROR c.e.jwt.api.repository.Expensedao:84[0;39m - PreparedStatementCallback; bad SQL grammar [INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (?, ?, ?, ?, ?,  ?,?,? ? ?, ?)]; nested exception is org.postgresql.util.PSQLException: ERROR: syntax error at or near "$9"
+  Position: 234
+[39m12:39:14.752 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - SOMETHING WENT WRONG .!
+[34m12:42:19.374 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:42:19.376 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:42:19.415 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:42:26.348 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 11116 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:42:26.356 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:42:26.357 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:42:28.716 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:42:28.731 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:42:28.732 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:42:28.862 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:42:28.862 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2362 ms
+[34m12:42:28.968 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:42:29.629 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:42:29.793 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:42:30.207 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e1ce44, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d025d1d, org.springframework.security.web.header.HeaderWriterFilter@12968227, org.springframework.security.web.authentication.logout.LogoutFilter@38fc5554, com.expense.jwt.api.filter.JwtFilter@3cae7b8b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9e2ad91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74dbb1ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69228e85, org.springframework.security.web.session.SessionManagementFilter@3e3861d7, org.springframework.security.web.access.ExceptionTranslationFilter@3872bc37, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@199bc830]
+[34m12:42:30.370 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:42:30.720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:42:30.725 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.678 seconds (JVM running for 6.461)
+[34m12:43:06.863 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:43:06.870 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:43:06.895 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:43:14.124 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 11238 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:43:14.130 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:43:14.131 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:43:16.643 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:43:16.658 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:43:16.659 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:43:16.790 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:43:16.791 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2554 ms
+[34m12:43:16.858 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:43:17.520 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:43:17.702 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:43:18.121 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b9776f5, org.springframework.security.web.context.SecurityContextPersistenceFilter@64968732, org.springframework.security.web.header.HeaderWriterFilter@65f2f9b0, org.springframework.security.web.authentication.logout.LogoutFilter@35764bef, com.expense.jwt.api.filter.JwtFilter@5ff2e84b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fd12c5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@149debbb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e048149, org.springframework.security.web.session.SessionManagementFilter@5e8cda75, org.springframework.security.web.access.ExceptionTranslationFilter@7fcf294e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43d38654]
+[34m12:43:18.328 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:43:18.747 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:43:18.752 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.982 seconds (JVM running for 6.765)
+[34m12:52:00.620 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:52:00.623 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:52:00.661 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:52:04.583 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 11789 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:52:04.598 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:52:04.600 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:52:07.179 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:52:07.196 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:52:07.197 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:52:07.305 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:52:07.306 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2575 ms
+[34m12:52:07.368 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:52:08.066 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:52:08.218 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:52:08.636 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8a2a6a, org.springframework.security.web.context.SecurityContextPersistenceFilter@10cd6753, org.springframework.security.web.header.HeaderWriterFilter@2903c6ff, org.springframework.security.web.authentication.logout.LogoutFilter@4e1ce44, com.expense.jwt.api.filter.JwtFilter@51351f28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47af099e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77eb5790, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@772861aa, org.springframework.security.web.session.SessionManagementFilter@3901f6af, org.springframework.security.web.access.ExceptionTranslationFilter@5d5160e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59d77850]
+[34m12:52:08.821 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:52:09.233 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:52:09.239 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.955 seconds (JVM running for 6.69)
+[34m12:53:16.715 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m12:53:16.716 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m12:53:16.727 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 11 ms
+[34m12:53:16.754 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:53:16.836 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:53:16.837 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:53:16.898 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:53:16.898 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:53:17.034 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[34m12:53:17.070 [http-nio-8085-exec-1] INFO  c.e.jwt.api.repository.Expensedao:76[0;39m - INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid ,:paymentrefnumber, :expensedate, :expenseentrydate)
+[39m12:53:17.072 [http-nio-8085-exec-1] DEBUG c.e.jwt.api.repository.Expensedao:77[0;39m - MapSqlParameterSource {title=expenseTitle, serviceid=2, merchantId=3, paymenttype=cash, cost=null, selectpaymentmode=UPI, amountpaid=5000, balancelefttopaid=2000, paymentrefnumber=XYZABC, expensedate=Mon Feb 01 00:00:00 IST 2021 (type:TIMESTAMP), expenseentrydate=Sat Feb 13 00:00:00 IST 2021 (type:TIMESTAMP)}
+[39m12:53:17.221 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:79[0;39m - inserted 1
+[39m12:53:17.221 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - Expense Added .!
+[34m12:53:58.222 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:53:58.225 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:53:58.226 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:53:58.229 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:53:58.230 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:53:58.234 [http-nio-8085-exec-3] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/deleteExpense-----------
+[39m12:53:58.253 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - 2
+[1;31m12:53:58.257 [http-nio-8085-exec-3] ERROR c.e.jwt.api.repository.Expensedao:152[0;39m - ERROR : null
+[39m12:53:58.260 [http-nio-8085-exec-3] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - []
+[34m12:56:41.234 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m12:56:41.236 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m12:56:41.271 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m12:56:48.316 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 12087 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m12:56:48.325 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m12:56:48.326 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m12:56:50.847 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m12:56:50.860 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m12:56:50.861 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m12:56:50.973 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m12:56:50.973 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2477 ms
+[34m12:56:51.044 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m12:56:51.774 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m12:56:51.965 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m12:56:52.364 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59d77850, org.springframework.security.web.context.SecurityContextPersistenceFilter@2903c6ff, org.springframework.security.web.header.HeaderWriterFilter@7d199c68, org.springframework.security.web.authentication.logout.LogoutFilter@199bc830, com.expense.jwt.api.filter.JwtFilter@21f8e55f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37af1f93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@602ae7b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53ed09e8, org.springframework.security.web.session.SessionManagementFilter@5d5160e6, org.springframework.security.web.access.ExceptionTranslationFilter@42c28305, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12d1f1d4]
+[34m12:56:52.554 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m12:56:52.991 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m12:56:52.997 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.944 seconds (JVM running for 6.686)
+[34m12:57:09.004 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m12:57:09.005 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m12:57:09.025 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 20 ms
+[34m12:57:09.047 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m12:57:09.137 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m12:57:09.138 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m12:57:09.209 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m12:57:09.210 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m12:57:09.264 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/getAllExpense-----------
+[39m12:57:09.315 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:181[0;39m - expenseQuery SELECT * from expense
+[39m12:57:09.317 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m12:57:09.333 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:184[0;39m - 2
+[1;31m12:57:09.339 [http-nio-8085-exec-1] ERROR c.e.jwt.api.repository.Expensedao:152[0;39m - ERROR : null
+[39m12:57:09.343 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - []
+[34m13:04:16.025 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m13:04:16.028 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m13:04:16.063 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m13:04:23.025 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 12302 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m13:04:23.033 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m13:04:23.034 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m13:04:25.686 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m13:04:25.699 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m13:04:25.699 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m13:04:25.815 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m13:04:25.816 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2614 ms
+[34m13:04:25.904 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m13:04:26.514 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m13:04:26.685 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m13:04:27.041 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cb40e3b, org.springframework.security.web.context.SecurityContextPersistenceFilter@ef1695a, org.springframework.security.web.header.HeaderWriterFilter@700f518a, org.springframework.security.web.authentication.logout.LogoutFilter@84487f4, com.expense.jwt.api.filter.JwtFilter@26a262d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@81b5db0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@790a251b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41b1f51e, org.springframework.security.web.session.SessionManagementFilter@319c3a25, org.springframework.security.web.access.ExceptionTranslationFilter@71ad3d8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19962194]
+[34m13:04:27.200 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m13:04:27.582 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m13:04:27.588 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 5.831 seconds (JVM running for 6.624)
+[34m13:05:01.316 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m13:05:01.316 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m13:05:01.328 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 12 ms
+[34m13:05:01.349 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m13:05:01.427 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m13:05:01.428 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m13:05:01.500 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m13:05:01.500 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m13:05:01.550 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/getAllExpense-----------
+[39m13:05:01.591 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:181[0;39m - expenseQuery SELECT * from expense
+[39m13:05:01.593 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m13:05:01.608 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:184[0;39m - 2
+[39m13:05:01.618 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - [{"title":"test_expense","merchantname":"test_merchant","servicename":"MERCHANT NOT AVAILABLE","paymenttype":"UPI","cost":"756","selectpaymentmode":"selectPaymentMode","paymentrefnumber":"paymentRefNumber","amountpaid":null,"balancelefttopaid":null},{"title":"expenseTitle","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000"}]
+[34m13:07:12.740 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m13:07:12.742 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m13:07:12.760 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m13:07:20.195 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 12463 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m13:07:20.202 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m13:07:20.217 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m13:07:23.237 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m13:07:23.253 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m13:07:23.254 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m13:07:23.371 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m13:07:23.371 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2985 ms
+[34m13:07:23.481 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m13:07:24.221 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m13:07:24.396 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m13:07:24.838 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8a2a6a, org.springframework.security.web.context.SecurityContextPersistenceFilter@10cd6753, org.springframework.security.web.header.HeaderWriterFilter@2903c6ff, org.springframework.security.web.authentication.logout.LogoutFilter@4e1ce44, com.expense.jwt.api.filter.JwtFilter@418c020b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47af099e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77eb5790, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@772861aa, org.springframework.security.web.session.SessionManagementFilter@3901f6af, org.springframework.security.web.access.ExceptionTranslationFilter@5d5160e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59d77850]
+[34m13:07:25.062 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m13:07:25.449 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m13:07:25.469 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 6.678 seconds (JVM running for 7.437)
+[34m13:08:02.057 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m13:08:02.057 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m13:08:02.069 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 12 ms
+[34m13:08:02.091 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m13:08:02.202 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m13:08:02.202 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m13:08:02.278 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m13:08:02.278 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m13:08:02.330 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/getAllExpense-----------
+[39m13:08:02.375 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m13:08:02.376 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m13:08:02.393 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 2
+[39m13:08:02.394 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:132[0;39m - [Expense{id=2, title='test_expense', serviceid=3, merchantid=null, servicename='null', merchantname='null', expensedate=2021-02-07 00:26:37.158, expenseentrydate=null, paymenttype='UPI', cost='756', selectpaymentmode='selectPaymentMode', paymentrefnumber='paymentRefNumber', exdate='null', amountpaid='null', balancelefttopaid='null', exentrydate='null', lastupdated=null}, Expense{id=3, title='expenseTitle', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}]
+[1;31m13:08:02.399 [http-nio-8085-exec-1] ERROR c.e.jwt.api.repository.Expensedao:153[0;39m - ERROR : null
+[39m13:08:02.404 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - []
+[34m14:04:13.468 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:04:13.471 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:04:13.472 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:04:13.477 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:04:13.478 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[31m14:04:13.497 [http-nio-8085-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:199[0;39m - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'expenseTitle' is not present]
+[34m14:04:39.872 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:04:39.874 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:04:39.875 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:04:39.877 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:04:39.878 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:04:39.881 [http-nio-8085-exec-4] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/getAllExpense-----------
+[39m14:04:39.883 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:04:39.884 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:04:39.886 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 1
+[39m14:04:39.888 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:132[0;39m - [Expense{id=3, title='expenseTitle', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}]
+[39m14:04:39.901 [http-nio-8085-exec-4] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - [{"title":"expenseTitle","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"}]
+[34m14:06:10.329 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m14:06:10.332 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m14:06:10.345 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m14:06:17.792 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 22173 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m14:06:17.799 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m14:06:17.805 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m14:06:21.158 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m14:06:21.184 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m14:06:21.185 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m14:06:21.382 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m14:06:21.383 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 3374 ms
+[34m14:06:21.493 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m14:06:22.201 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m14:06:22.370 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m14:06:22.799 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@140d1230, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c8662ac, org.springframework.security.web.header.HeaderWriterFilter@168cd36b, org.springframework.security.web.authentication.logout.LogoutFilter@332820f4, com.expense.jwt.api.filter.JwtFilter@604b1e1d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3724b43e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@81b5db0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cbf1ba4, org.springframework.security.web.session.SessionManagementFilter@b835727, org.springframework.security.web.access.ExceptionTranslationFilter@408e96d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8f2098e]
+[34m14:06:23.133 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m14:06:23.661 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m14:06:23.668 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 7.291 seconds (JVM running for 8.234)
+[34m14:09:50.387 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m14:09:50.390 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m14:09:50.411 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m14:09:54.827 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 22426 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m14:09:54.844 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m14:09:54.846 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m14:09:57.723 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m14:09:57.738 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m14:09:57.739 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m14:09:57.861 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m14:09:57.862 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2851 ms
+[34m14:09:57.952 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m14:09:58.825 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m14:09:59.007 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m14:09:59.409 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ce53f6a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ba30587, org.springframework.security.web.header.HeaderWriterFilter@43b40233, org.springframework.security.web.authentication.logout.LogoutFilter@ef1695a, com.expense.jwt.api.filter.JwtFilter@ab20d7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5633dafd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@408e96d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d82408, org.springframework.security.web.session.SessionManagementFilter@316a598d, org.springframework.security.web.access.ExceptionTranslationFilter@670d4d38, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7158daf2]
+[34m14:09:59.669 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m14:10:00.180 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m14:10:00.186 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 6.887 seconds (JVM running for 7.837)
+[34m14:10:17.156 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m14:10:17.156 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m14:10:17.171 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 14 ms
+[34m14:10:17.204 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:10:17.308 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:10:17.309 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:10:17.375 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:10:17.376 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:10:17.545 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[34m14:10:17.587 [http-nio-8085-exec-1] INFO  c.e.jwt.api.repository.Expensedao:76[0;39m - INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid ,:paymentrefnumber, :expensedate, :expenseentrydate)
+[39m14:10:17.589 [http-nio-8085-exec-1] DEBUG c.e.jwt.api.repository.Expensedao:77[0;39m - MapSqlParameterSource {title=expenseTitle2, serviceid=2, merchantId=3, paymenttype=cash, cost=null, selectpaymentmode=UPI, amountpaid=5000, balancelefttopaid=2000, paymentrefnumber=XYZABC, expensedate=Mon Feb 01 00:00:00 IST 2021 (type:TIMESTAMP), expenseentrydate=Sat Feb 13 00:00:00 IST 2021 (type:TIMESTAMP)}
+[39m14:10:17.635 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:79[0;39m - inserted 1
+[39m14:10:17.636 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - Expense Added .!
+[34m14:10:21.163 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:10:21.165 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:10:21.165 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:10:21.168 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:10:21.170 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:10:21.179 [http-nio-8085-exec-3] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[34m14:10:21.183 [http-nio-8085-exec-3] INFO  c.e.jwt.api.repository.Expensedao:76[0;39m - INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid ,:paymentrefnumber, :expensedate, :expenseentrydate)
+[39m14:10:21.184 [http-nio-8085-exec-3] DEBUG c.e.jwt.api.repository.Expensedao:77[0;39m - MapSqlParameterSource {title=expenseTitle2, serviceid=2, merchantId=3, paymenttype=cash, cost=null, selectpaymentmode=UPI, amountpaid=5000, balancelefttopaid=2000, paymentrefnumber=XYZABC, expensedate=Mon Feb 01 00:00:00 IST 2021 (type:TIMESTAMP), expenseentrydate=Sat Feb 13 00:00:00 IST 2021 (type:TIMESTAMP)}
+[39m14:10:21.318 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:79[0;39m - inserted 1
+[39m14:10:21.319 [http-nio-8085-exec-3] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - Expense Added .!
+[34m14:10:22.809 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:10:22.812 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:10:22.813 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:10:22.816 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:10:22.816 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:10:22.822 [http-nio-8085-exec-4] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[34m14:10:22.825 [http-nio-8085-exec-4] INFO  c.e.jwt.api.repository.Expensedao:76[0;39m - INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid ,:paymentrefnumber, :expensedate, :expenseentrydate)
+[39m14:10:22.826 [http-nio-8085-exec-4] DEBUG c.e.jwt.api.repository.Expensedao:77[0;39m - MapSqlParameterSource {title=expenseTitle2, serviceid=2, merchantId=3, paymenttype=cash, cost=null, selectpaymentmode=UPI, amountpaid=5000, balancelefttopaid=2000, paymentrefnumber=XYZABC, expensedate=Mon Feb 01 00:00:00 IST 2021 (type:TIMESTAMP), expenseentrydate=Sat Feb 13 00:00:00 IST 2021 (type:TIMESTAMP)}
+[39m14:10:22.950 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:79[0;39m - inserted 1
+[39m14:10:22.952 [http-nio-8085-exec-4] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - Expense Added .!
+[34m14:10:23.851 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:10:23.853 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:10:23.854 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:10:23.862 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:10:23.863 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:10:23.869 [http-nio-8085-exec-2] INFO  c.e.j.a.controller.ExpenseController:22[0;39m - --------------/addExpense-----------
+[34m14:10:23.872 [http-nio-8085-exec-2] INFO  c.e.jwt.api.repository.Expensedao:76[0;39m - INSERT INTO expense(
+             title, serviceid,merchantid,  paymenttype, cost, 
+            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate)     VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid ,:paymentrefnumber, :expensedate, :expenseentrydate)
+[39m14:10:23.873 [http-nio-8085-exec-2] DEBUG c.e.jwt.api.repository.Expensedao:77[0;39m - MapSqlParameterSource {title=expenseTitle2, serviceid=2, merchantId=3, paymenttype=cash, cost=null, selectpaymentmode=UPI, amountpaid=5000, balancelefttopaid=2000, paymentrefnumber=XYZABC, expensedate=Mon Feb 01 00:00:00 IST 2021 (type:TIMESTAMP), expenseentrydate=Sat Feb 13 00:00:00 IST 2021 (type:TIMESTAMP)}
+[39m14:10:23.994 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:79[0;39m - inserted 1
+[39m14:10:23.995 [http-nio-8085-exec-2] TRACE c.e.j.a.controller.ExpenseController:29[0;39m - Expense Added .!
+[34m14:10:36.403 [http-nio-8085-exec-5] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:10:36.405 [http-nio-8085-exec-5] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:10:36.406 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:10:36.414 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:10:36.415 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[31m14:10:36.424 [http-nio-8085-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver:199[0;39m - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+[34m14:10:49.025 [http-nio-8085-exec-6] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:10:49.030 [http-nio-8085-exec-6] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:10:49.032 [http-nio-8085-exec-6] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:10:49.037 [http-nio-8085-exec-6] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:10:49.037 [http-nio-8085-exec-6] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:10:49.041 [http-nio-8085-exec-6] INFO  c.e.j.a.controller.ExpenseController:79[0;39m - --------------/getAllExpense-----------
+[39m14:10:49.047 [http-nio-8085-exec-6] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:10:49.048 [http-nio-8085-exec-6] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:10:49.078 [http-nio-8085-exec-6] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[39m14:10:49.079 [http-nio-8085-exec-6] TRACE c.e.jwt.api.repository.Expensedao:132[0;39m - [Expense{id=3, title='expenseTitle', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=4, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=5, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=6, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=7, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}]
+[39m14:10:49.094 [http-nio-8085-exec-6] TRACE c.e.j.a.controller.ExpenseController:86[0;39m - [{"title":"expenseTitle","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"}]
+[34m14:12:29.144 [http-nio-8085-exec-8] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:12:29.146 [http-nio-8085-exec-8] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:12:29.146 [http-nio-8085-exec-8] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:12:29.150 [http-nio-8085-exec-8] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:12:29.151 [http-nio-8085-exec-8] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:12:29.158 [http-nio-8085-exec-8] INFO  c.e.j.a.controller.ExpenseController:61[0;39m - --------------/deleteExpense-----------
+[39m14:12:29.160 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense WHERE title=:expenseTitle
+[39m14:12:29.161 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource {expenseTitle=expenseTitle}
+[39m14:12:29.163 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 1
+[39m14:12:29.164 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:132[0;39m - [Expense{id=3, title='expenseTitle', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}]
+[39m14:12:29.165 [http-nio-8085-exec-8] TRACE c.e.j.a.controller.ExpenseController:68[0;39m - [{"title":"expenseTitle","merchantname":"SERVICE NOT AVAILABLE","servicename":"CALLING","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"}]
+[34m14:16:10.672 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m14:16:10.675 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m14:16:10.722 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m14:16:18.412 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 22665 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m14:16:18.427 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m14:16:18.432 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m14:16:21.616 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m14:16:21.638 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m14:16:21.639 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m14:16:21.773 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m14:16:21.773 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 3122 ms
+[34m14:16:21.858 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m14:16:22.680 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m14:16:22.871 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m14:16:23.315 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57402ba1, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c2fb9dd, org.springframework.security.web.header.HeaderWriterFilter@46c3a14d, org.springframework.security.web.authentication.logout.LogoutFilter@37af1f93, com.expense.jwt.api.filter.JwtFilter@22367b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61a1ea2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@670d4d38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56913163, org.springframework.security.web.session.SessionManagementFilter@4d1f1ff5, org.springframework.security.web.access.ExceptionTranslationFilter@5e671e20, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d75e7af]
+[34m14:16:23.515 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m14:16:24.002 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m14:16:24.009 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 7.144 seconds (JVM running for 7.99)
+[34m14:16:40.966 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m14:16:40.966 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m14:16:40.979 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 13 ms
+[34m14:16:41.004 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:16:41.093 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:16:41.093 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:16:41.152 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:16:41.152 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:16:41.222 [http-nio-8085-exec-1] INFO  c.e.j.a.controller.ExpenseController:61[0;39m - --------------/deleteExpense-----------
+[39m14:16:41.268 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense WHERE title=:expenseTitle
+[39m14:16:41.270 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource {expenseTitle=expenseTitle2}
+[39m14:16:41.290 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 4
+[39m14:16:41.291 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:132[0;39m - [Expense{id=4, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=5, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=6, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}, Expense{id=7, title='expenseTitle2', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}]
+[39m14:16:41.304 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:68[0;39m - [{"title":"expenseTitle2","merchantname":"test_merchant","servicename":"test_merchant_service","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"test_merchant","servicename":"test_merchant_service","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"test_merchant","servicename":"test_merchant_service","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"},{"title":"expenseTitle2","merchantname":"test_merchant","servicename":"test_merchant_service","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"}]
+[34m14:16:46.836 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:16:46.838 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:16:46.839 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:16:46.842 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:16:46.843 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[34m14:16:46.852 [http-nio-8085-exec-2] INFO  c.e.j.a.controller.ExpenseController:61[0;39m - --------------/deleteExpense-----------
+[39m14:16:46.858 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense WHERE title=:expenseTitle
+[39m14:16:46.859 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource {expenseTitle=expenseTitle}
+[39m14:16:46.869 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 1
+[39m14:16:46.870 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:132[0;39m - [Expense{id=3, title='expenseTitle', serviceid=2, merchantid=3, servicename='null', merchantname='null', expensedate=2021-02-01 00:00:00.0, expenseentrydate=2021-02-13 00:00:00.0, paymenttype='cash', cost='null', selectpaymentmode='UPI', paymentrefnumber='XYZABC', exdate='null', amountpaid='5000', balancelefttopaid='2000', exentrydate='null', lastupdated=null}]
+[39m14:16:46.871 [http-nio-8085-exec-2] TRACE c.e.j.a.controller.ExpenseController:68[0;39m - [{"title":"expenseTitle","merchantname":"test_merchant","servicename":"test_merchant_service","expensedate":"2021-02-01 00:00:00","paymenttype":"cash","cost":null,"selectpaymentmode":"UPI","paymentrefnumber":"XYZABC","amountpaid":"5000","balancelefttopaid":"2000","expenseentrydate":"2021-02-13 00:00:00"}]
+[34m14:19:12.076 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m14:19:12.080 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m14:19:12.098 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m14:19:19.980 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 22837 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m14:19:19.989 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m14:19:19.992 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m14:19:23.386 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m14:19:23.403 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m14:19:23.404 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m14:19:23.539 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m14:19:23.539 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 3280 ms
+[34m14:19:23.629 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m14:19:24.400 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m14:19:24.590 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m14:19:25.042 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dd7796b, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d1f1ff5, org.springframework.security.web.header.HeaderWriterFilter@5e671e20, org.springframework.security.web.authentication.logout.LogoutFilter@2903c6ff, com.expense.jwt.api.filter.JwtFilter@65a5d4f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c2fb9dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41522537, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67a3bd51, org.springframework.security.web.session.SessionManagementFilter@6fd12c5, org.springframework.security.web.access.ExceptionTranslationFilter@59e43e8c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3419e23b]
+[34m14:19:25.226 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m14:19:25.668 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m14:19:25.675 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 7.122 seconds (JVM running for 8.155)
+[34m14:19:42.778 [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m14:19:42.779 [http-nio-8085-exec-2] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m14:19:42.792 [http-nio-8085-exec-2] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 13 ms
+[34m14:19:42.814 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:19:42.892 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:19:42.893 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:19:42.959 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:19:42.960 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:19:43.050 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:19:43.051 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:19:43.070 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:20:13.761 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m14:20:13.764 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m14:20:13.782 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m14:20:21.668 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 22977 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m14:20:21.674 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m14:20:21.685 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m14:20:24.583 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m14:20:24.599 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m14:20:24.600 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m14:20:24.739 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m14:20:24.740 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2839 ms
+[34m14:20:24.826 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m14:20:25.582 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m14:20:25.856 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m14:20:26.281 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14229fa7, org.springframework.security.web.context.SecurityContextPersistenceFilter@670d4d38, org.springframework.security.web.header.HeaderWriterFilter@222afc67, org.springframework.security.web.authentication.logout.LogoutFilter@71ad3d8a, com.expense.jwt.api.filter.JwtFilter@2fc2a205, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43b40233, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35cd68d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ab0702e, org.springframework.security.web.session.SessionManagementFilter@41522537, org.springframework.security.web.access.ExceptionTranslationFilter@1de0a46c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67a3bd51]
+[34m14:20:26.505 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m14:20:26.981 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m14:20:26.987 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 7.001 seconds (JVM running for 7.927)
+[34m14:20:34.108 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m14:20:34.109 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m14:20:34.124 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 15 ms
+[34m14:20:34.156 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:20:34.250 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:20:34.251 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:20:34.303 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:20:34.303 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:20:34.370 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:20:34.371 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:20:34.389 [http-nio-8085-exec-1] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:21:14.159 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:21:14.162 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:21:14.162 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:21:14.166 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:21:14.169 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:21:14.176 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:21:14.177 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:21:14.186 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:21:30.004 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:21:30.006 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:21:30.006 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:21:30.009 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:21:30.010 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:21:30.014 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:21:30.014 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:21:30.028 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:21:58.399 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:21:58.403 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:21:58.405 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:21:58.410 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:21:58.410 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:21:58.415 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:21:58.416 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:21:58.429 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:23:39.410 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m14:23:39.412 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m14:23:39.445 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m14:23:47.447 [main] INFO  com.expense.jwt.api.ExpenseApp:55[0;39m - Starting ExpenseApp on sumit with PID 23140 (/home/sumit/Desktop/ExpensePostgres/target/classes started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m14:23:47.457 [main] DEBUG com.expense.jwt.api.ExpenseApp:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m14:23:47.458 [main] INFO  com.expense.jwt.api.ExpenseApp:651[0;39m - No active profile set, falling back to default profiles: default
+[34m14:23:50.062 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:92[0;39m - Tomcat initialized with port(s): 8085 (http)
+[34m14:23:50.082 [main] INFO  o.a.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+[34m14:23:50.083 [main] INFO  o.a.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[34m14:23:50.214 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring embedded WebApplicationContext
+[34m14:23:50.215 [main] INFO  o.s.web.context.ContextLoader:284[0;39m - Root WebApplicationContext: initialization completed in 2581 ms
+[34m14:23:50.296 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m14:23:50.963 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[39m14:23:51.135 [main] DEBUG com.expense.jwt.api.filter.JwtFilter:242[0;39m - Filter 'jwtFilter' configured for use
+[34m14:23:51.546 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42b28ff1, org.springframework.security.web.context.SecurityContextPersistenceFilter@524a2ffb, org.springframework.security.web.header.HeaderWriterFilter@790a251b, org.springframework.security.web.authentication.logout.LogoutFilter@5e048149, com.expense.jwt.api.filter.JwtFilter@77134e08, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@332820f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@84487f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36061cf3, org.springframework.security.web.session.SessionManagementFilter@7a7cc52c, org.springframework.security.web.access.ExceptionTranslationFilter@27b45ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ca8d498]
+[34m14:23:51.724 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m14:23:52.121 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer:204[0;39m - Tomcat started on port(s): 8085 (http) with context path ''
+[34m14:23:52.126 [main] INFO  com.expense.jwt.api.ExpenseApp:61[0;39m - Started ExpenseApp in 6.232 seconds (JVM running for 7.053)
+[34m14:24:22.174 [http-nio-8085-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[34m14:24:22.175 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+[34m14:24:22.190 [http-nio-8085-exec-1] INFO  o.s.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 15 ms
+[34m14:24:22.216 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:24:22.327 [http-nio-8085-exec-1] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:24:22.328 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:24:22.411 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:24:22.412 [http-nio-8085-exec-1] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:24:22.495 [http-nio-8085-exec-1] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> null
+[1;31m14:24:22.512 [http-nio-8085-exec-1] ERROR c.e.jwt.api.repository.Expensedao:187[0;39m - Unparseable date: "null 00:00:00"
+[34m14:24:48.575 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:24:48.577 [http-nio-8085-exec-2] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:24:48.579 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:24:48.582 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:24:48.582 [http-nio-8085-exec-2] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:24:48.587 [http-nio-8085-exec-2] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> 
+[39m14:24:48.592 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:24:48.593 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:24:48.614 [http-nio-8085-exec-2] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:25:06.831 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:25:06.833 [http-nio-8085-exec-3] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:25:06.834 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:25:06.837 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:25:06.838 [http-nio-8085-exec-3] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:25:06.845 [http-nio-8085-exec-3] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> 2021-01-01
+[39m14:25:06.847 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense WHERE expenseentrydate between :morning AND :midnight
+[39m14:25:06.848 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource {morning=Fri Jan 01 00:00:00 IST 2021, midnight=Fri Jan 01 23:59:59 IST 2021}
+[39m14:25:06.860 [http-nio-8085-exec-3] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 0
+[34m14:25:25.532 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:25:25.534 [http-nio-8085-exec-4] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:25:25.534 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:25:25.538 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:25:25.539 [http-nio-8085-exec-4] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:25:25.543 [http-nio-8085-exec-4] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> 2021-02-13
+[39m14:25:25.544 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense WHERE expenseentrydate between :morning AND :midnight
+[39m14:25:25.545 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource {morning=Sat Feb 13 00:00:00 IST 2021, midnight=Sat Feb 13 23:59:59 IST 2021}
+[39m14:25:25.553 [http-nio-8085-exec-4] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m14:25:31.599 [http-nio-8085-exec-5] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m14:25:31.601 [http-nio-8085-exec-5] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m14:25:31.602 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m14:25:31.605 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m14:25:31.606 [http-nio-8085-exec-5] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m14:25:31.610 [http-nio-8085-exec-5] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> 
+[39m14:25:31.611 [http-nio-8085-exec-5] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m14:25:31.613 [http-nio-8085-exec-5] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m14:25:31.621 [http-nio-8085-exec-5] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m17:12:43.564 [http-nio-8085-exec-7] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m17:12:43.566 [http-nio-8085-exec-7] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m17:12:43.567 [http-nio-8085-exec-7] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m17:12:43.573 [http-nio-8085-exec-7] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m17:12:43.573 [http-nio-8085-exec-7] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m17:12:43.577 [http-nio-8085-exec-7] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> 
+[39m17:12:43.578 [http-nio-8085-exec-7] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense
+[39m17:12:43.578 [http-nio-8085-exec-7] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource MapSqlParameterSource {}
+[39m17:12:43.589 [http-nio-8085-exec-7] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m17:12:54.909 [http-nio-8085-exec-8] INFO  com.expense.jwt.api.filter.JwtFilter:40[0;39m -  authorizationHeader---> eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrc2hlZXJkaGFtLml0QGdtYWlsLmNvbSIsImV4cCI6MTYxMzIzNDEwNiwiaWF0IjoxNjEzMTk4MTA2fQ.zJAEQVMUVRc2Ab6XQUMGSSCW_cIoMBDGWhj1JNjOzqc
+[34m17:12:54.911 [http-nio-8085-exec-8] INFO  com.expense.jwt.api.filter.JwtFilter:43[0;39m - userName extracted -----> ksheerdham.it@gmail.com
+[34m17:12:54.912 [http-nio-8085-exec-8] INFO  c.e.j.a.s.CustomUserDetailsService:24[0;39m - ----email loading of ---->ksheerdham.it@gmail.com
+[34m17:12:54.919 [http-nio-8085-exec-8] INFO  c.e.j.a.s.CustomUserDetailsService:26[0;39m - username ===>ksheerdham
+[34m17:12:54.920 [http-nio-8085-exec-8] INFO  c.e.j.a.s.CustomUserDetailsService:27[0;39m - username ===>ksheerdham.it@gmail.com
+[39m17:12:54.927 [http-nio-8085-exec-8] TRACE c.e.j.a.controller.ExpenseController:74[0;39m - getExpenseSummary date -> 2021-02-13
+[39m17:12:54.928 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:182[0;39m - expenseQuery SELECT * from expense WHERE expenseentrydate between :morning AND :midnight
+[39m17:12:54.928 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:183[0;39m - parameterSource MapSqlParameterSource {morning=Sat Feb 13 00:00:00 IST 2021, midnight=Sat Feb 13 23:59:59 IST 2021}
+[39m17:12:54.935 [http-nio-8085-exec-8] TRACE c.e.jwt.api.repository.Expensedao:185[0;39m - 5
+[34m17:13:32.107 [main] INFO  c.e.j.a.SpringSecurityJwtExampleApplicationTests:55[0;39m - Starting SpringSecurityJwtExampleApplicationTests on sumit with PID 32330 (started by sumit in /home/sumit/Desktop/ExpensePostgres)
+[39m17:13:32.110 [main] DEBUG c.e.j.a.SpringSecurityJwtExampleApplicationTests:56[0;39m - Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+[34m17:13:32.112 [main] INFO  c.e.j.a.SpringSecurityJwtExampleApplicationTests:651[0;39m - No active profile set, falling back to default profiles: default
+[34m17:13:34.067 [main] INFO  com.zaxxer.hikari.HikariDataSource:80[0;39m - HikariPool-1 - Starting...
+[34m17:13:34.984 [main] INFO  com.zaxxer.hikari.HikariDataSource:82[0;39m - HikariPool-1 - Start completed.
+[34m17:13:35.841 [main] INFO  o.s.s.web.DefaultSecurityFilterChain:43[0;39m - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6467ddc7, org.springframework.security.web.context.SecurityContextPersistenceFilter@60e1d87c, org.springframework.security.web.header.HeaderWriterFilter@7b222230, org.springframework.security.web.authentication.logout.LogoutFilter@5b251fb9, com.expense.jwt.api.filter.JwtFilter@27b337bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e5b621b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59303963, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59636c47, org.springframework.security.web.session.SessionManagementFilter@41f3aaf1, org.springframework.security.web.access.ExceptionTranslationFilter@1578b8ec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46c10083]
+[34m17:13:36.651 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor:171[0;39m - Initializing ExecutorService 'applicationTaskExecutor'
+[34m17:13:37.239 [main] INFO  c.e.j.a.SpringSecurityJwtExampleApplicationTests:61[0;39m - Started SpringSecurityJwtExampleApplicationTests in 6.099 seconds (JVM running for 7.968)
+[34m17:13:38.296 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m17:13:38.303 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m17:13:38.329 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.
+[34m17:13:55.534 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor:208[0;39m - Shutting down ExecutorService 'applicationTaskExecutor'
+[34m17:13:55.536 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:350[0;39m - HikariPool-1 - Shutdown initiated...
+[34m17:13:55.548 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource:352[0;39m - HikariPool-1 - Shutdown completed.

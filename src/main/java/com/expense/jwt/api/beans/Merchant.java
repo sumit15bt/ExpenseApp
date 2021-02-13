@@ -4,24 +4,47 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//import javax.persistence.Entity;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Merchant {
-    private String id;
+    private Integer id;
     private String name;
-    private String primaryContactNo;
-    private String secondaryContactNo;
-    private String gstNo;
+    private String primarycontactno;
+    private String secondarycontactno;
+    private String gstno;
     private String address;
     private String state;
-    private String cityName;
-    private String pinCode;
-    private String AccountHolderName;
-    private String AccountNo;
-    private String BankName;
-    private String IfscCode;
+    private String cityname;
+    private String pincode;
+    private String accountholdername;
+    private String accountno;
+    private String bankname;
+    private String ifsccode;
+    private Date entrydate;
+    private Date lastupdated;
 
+
+    @Override
+    public String toString() {
+        return "Merchant{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", primarycontactno='" + primarycontactno + '\'' +
+                ", secondarycontactno='" + secondarycontactno + '\'' +
+                ", gstno='" + gstno + '\'' +
+                ", address='" + address + '\'' +
+                ", state='" + state + '\'' +
+                ", cityname='" + cityname + '\'' +
+                ", pincode='" + pincode + '\'' +
+                ", accountholdername='" + accountholdername + '\'' +
+                ", accountno='" + accountno + '\'' +
+                ", bankname='" + bankname + '\'' +
+                ", ifsccode='" + ifsccode + '\'' +
+                ", entrydate=" + entrydate +
+                ", lastupdated=" + lastupdated +
+                '}';
+    }
 }

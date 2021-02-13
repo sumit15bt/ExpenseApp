@@ -1,10 +1,9 @@
 package com.expense.jwt.api.controller;
 import com.expense.jwt.api.beans.AuthRequest;
+import com.expense.jwt.api.beans.MServices;
 import com.expense.jwt.api.beans.Merchant;
-//import com.expense.jwt.api.entity.User;
-//import com.expense.jwt.api.repository.UserRepository;
-import com.expense.jwt.api.repository.UserRepository;
-import com.expense.jwt.api.service.MerchantService;
+import com.expense.jwt.api.repository.MerchantDao;
+import com.expense.jwt.api.repository.Servicedao;
 import com.expense.jwt.api.util.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,10 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 @RestController
@@ -25,14 +27,14 @@ public class MerchantController {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    MerchantService merchantService;
+    private MerchantDao merchantDao;
 
     @Autowired
-    private UserRepository repository;
+    private Servicedao servicedao;
 
-    @GetMapping("/")  // get all merchant
+
+    @GetMapping("/")
     public String welcome() {
-//        List<User> allUser=repository.findAll();
         log.trace("A TRACE Message");
         log.debug("A DEBUG Message");
         log.info("An INFO Message");
@@ -45,25 +47,6 @@ public class MerchantController {
     public String testapi() {
         return "BACKEND API working fine !!";
     }
-
-//    @PostMapping("/signup")
-//    public String signup(@RequestBody User user) throws Exception {
-//        log.trace("-----------------signup----------------");
-//        String response="";
-//        try {
-//            User signUpUser=new User();
-//            signUpUser.setUserName(user.getUserName());
-//            signUpUser.setEmail(user.getEmail());
-//            signUpUser.setPassword(user.getPassword()); // not hashing for now => to do later if told.
-//            repository.save(user);
-//            response="Sign up Successfully";
-//        } catch (Exception ex) {
-//            log.trace(ex.getMessage());
-//            response="Something went wrong";
-//        }
-//        return response;
-//    }
-
 
 //    {"userName": "15btcse065@gmail.com",
 //            "password":"sumit"}
@@ -80,16 +63,42 @@ public class MerchantController {
         return jwtUtil.generateToken(authRequest.getUserName());
     }
 
-    @GetMapping("/getMerchantDetails")
-    public Merchant getMerchantDetails(@RequestParam String name ) throws InterruptedException, ExecutionException{
-        log.info("get_merchant------------------->");
-        Merchant merchant=null;
+    @GetMapping("/getMerchantServices")
+    public String getMerchantDetails(@RequestParam("merchantName") String merchantName) throws InterruptedException, ExecutionException{
+        log.info("get_merchant-------------------> {} ",merchantName);
+        String allServices="";
         try {
-            merchant=merchantService.getMerchantDetails(name);
+            allServices=servicedao.getService(null,merchantName);
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
-        return merchant;
+        log.trace(allServices.toString());
+        return allServices;
+    }
+
+    @GetMapping("/getAllMerchantANDServices")
+    public Map<String, List<MServices>> getAllMerchantANDServices() {
+        log.info("getAllMerchantANDServices-------------------> {} ");
+        Map<String, List<MServices>> allServices=new HashMap();
+        try {
+            allServices=merchantDao.getAllMerchantAndServices();
+        }catch (Exception ex){
+            log.error(ex.getMessage());
+        }
+        log.trace(allServices.toString());
+        return allServices;
+    }
+
+    @GetMapping("/getAllMerchants")
+    public String getAllMerchants() {
+        log.info("getAllMerchantANDServices-------------------> {} ");
+        String allMerchant= "";
+        try {
+            allMerchant=merchantDao.getAllMerchants();
+        }catch (Exception ex){
+            log.error(ex.getMessage());
+        }
+        return allMerchant;
     }
 
     @PostMapping("/createMerchant")
@@ -97,28 +106,38 @@ public class MerchantController {
         log.info("create_merchant-------------------> {}",merchantDetailBean.toString());
         String response="SOMETHING WENT WRONG ..!";
         try{
-            response=merchantService.saveMerchantDetails(merchantDetailBean);
+            response=merchantDao.createMerchant(merchantDetailBean);
         }catch (Exception ex){
             ex.printStackTrace(System.out);
         }
         return response;
     }
 
-    @PutMapping("/updateMerchant")
-    public String updateMerchant(@RequestBody Merchant merchant) throws InterruptedException, ExecutionException {
-        System.out.println("update_merchant_Details------------------->");
+    @PostMapping("/updateMerchant")
+    public String updateMerchant(@RequestBody Merchant merchantDetailBean) throws InterruptedException, ExecutionException {
         log.trace("update_merchant_Details------------------->");
         String response="SOMETHING WENT WRONG ..!";
         try{
-            response=merchantService.updateMerchantDetails(merchant);
+            response=merchantDao.updateMerchant(merchantDetailBean);
         }catch (Exception ex){
             ex.printStackTrace(System.out);
         }
         return response;
     }
 
-    @DeleteMapping("/deleteMerchant")
-    public String deleteMerchant(@RequestParam String name){
-        return merchantService.deleteMerchant(name);
+    @GetMapping("/deleteMerchant")
+    public String deleteMerchant(@RequestParam("merchantName") String merchantName){
+        log.info("--------------/deleteMerchant-----------");
+        String response="SOMETHING WENT WRONG ..!";
+        try{
+            response=merchantDao.deleteMerchant(merchantName);
+        }catch (Exception ex){
+            log.error(ex.getMessage());
+        }
+        log.trace(response);
+        return response;
     }
+
+    // TODO GET MERCHANT DETAIL PARTICULARLY AND ALL
+
 }

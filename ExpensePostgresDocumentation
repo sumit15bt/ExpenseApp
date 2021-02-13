@@ -1,0 +1,93 @@
+ ssh root@139.59.70.209 ---> kSheerdham@123Expense
+
+kSheerdham@123Expense
+------------------------------------------------- TODO
+
+
+1. add merchant in expense and expense date  seletion option. all changes
+2. merchant with service and its expense.
+
+
+3. expense detailing today ,
+4. expense if date seletion
+------------------------------------------------------------------
+
+ ### grep -d any -W byline port 8085
+------------------------------how to run jar file -----------------
+### tmux
+ new terminal session open
+then ### java -jar expense.jar
+ctrl+b then press d to come out that terminal
+### tmux a ===> to go inside that tmux session
+
+
+
+---------------------------------------------------------
+
+
+=============================================================== ip=159.65.144.40 ===================================================
+
+
+
+http://<ip>:8085/getAllMerchants GET request. all merchant detail
+http://<ip>:8085/getAllService GET request. to get all services irrespective of merchant.
+http://<ip>:8085/getMerchantServices GET request with parameter merchantName=<merchantName> to view services of particular merchant.
+http://<ip>:8085/getServiceDetail GET request with parameter serviceName=<serviceName> to view particular services
+====================================================
+
+http://<ip>:8085/authenticate  for authentication
+ 
+{
+  "userName":"ksheerdham.it@gmail.com",
+  "password":"ksheerdham.it"
+}
+
+
+--------create merchant 
+
+ http://<ip>:8085/createMerchant   OR http://<ip>:8085/updateMerchant POST
+
+POST
+{
+  "name":"",
+  "primarycontactno":"",
+  "secondarycontactno":"",
+  "gstno":"",
+  "address":"",
+  "state":"U.p",
+  "cityname":"noida",
+  "pincode":"123456",
+  "accountholdername":"test",
+  "accountno":"0123456789",
+  "bankname" :"bankName2",
+  "ifsccode" :"ifscCode2"
+}
+
+-------deleteMerchant ---------http://<ip>:8085/deleteMerchant?merchantName=test_merchant_service  GET
+
+------------ create service   ===> http://<ip>:8085/createService   OR  http://<ip>:8085/updateService POST
+{
+  "name":"",
+  "merchantname":"",
+  "price":"",
+  "tax_gst_percentage":"",
+  "address":"",
+  "description":"",
+  "otherdetails":""
+}
+
+-------deleteService ---------http://<ip>:8085/deleteService?serviceName=<test_merchant_service>  GET
+
+
+----------- add expense 
+http://<ip>:8085/addExpense
+{
+  "expenseTitle":" ",
+  "serviceId":"",
+  "expenseDate":"",
+  "paymentType":"",
+  "cost":"",
+  "selectPaymentMode":"",
+  "paymentRefNumber":"",
+}
+getExpensesOfService?serviceName=<serviceName>
