@@ -91,6 +91,4 @@ public class MerchantServicesController {
         log.trace(response);
         return response;
     }
-
-
 }

@@ -6,6 +6,8 @@ import com.expense.jwt.api.beans.Merchant;
 import com.google.common.collect.Lists;
 import com.google.gson.JsonArray;
 import lombok.extern.log4j.Log4j2;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -43,37 +45,38 @@ public class MerchantDao {
         return jdbcTemplate.queryForObject(query,Integer.class);
     }
 
-    public String getAllMerchants(){
+    public List<Merchant> getAllMerchants(){
         JsonArray allExpense = new JsonArray();
         String expenseQuery="SELECT * from merchant";
-        return jdbcTemplate.query(expenseQuery, new BeanPropertyRowMapper<>(Merchant.class)).toString();
+        return jdbcTemplate.query(expenseQuery, new BeanPropertyRowMapper<>(Merchant.class));
     }
 
-    public Map<String, List<MServices>> getAllMerchantAndServices() {
-        Map<String,List<MServices>> merchantServiceMap=new HashMap<>();
-        Map<Integer,String> merchantMap= getMerchantIdNameMap();
-        if(merchantMap.keySet().size() == 0) {
-            return  merchantServiceMap;
-        }
-        String query = "SELECT * FROM service WHERE merchantid IN (:merchanids)";
-        MapSqlParameterSource parameterSource=new MapSqlParameterSource();
-        parameterSource.addValue("merchanids", merchantMap.keySet());
-        List<MServices> servicesList=namedParameterJdbcTemplate.query(query,parameterSource,new BeanPropertyRowMapper<>(MServices.class));
-        log.trace(servicesList);
-        log.trace(servicesList.size());
-        servicesList.forEach((services)->{
-            String merchant=merchantMap.getOrDefault(services.getMerchantid(),"");
-            if(merchantServiceMap.containsKey(merchant)){
-                List<MServices> serviceList=merchantServiceMap.get(merchant);
-                serviceList.add(services);
-                merchantServiceMap.put(merchant,serviceList);
-            }else{
-                List<MServices> serviceList=new ArrayList<>();
-                serviceList.add(services);
-                merchantServiceMap.put(merchant,serviceList);
+    public JSONObject getAllMerchantAndServices() {
+        JSONObject merchantServices=new JSONObject();
+        try{
+            Map<Integer,String> merchantMap= getMerchantIdNameMap();
+            if(merchantMap.keySet().size() == 0) {
+                return  merchantServices;
             }
-        });
-        return merchantServiceMap;
+            String query = "SELECT * FROM service WHERE merchantid IN (:merchanids)";
+            MapSqlParameterSource parameterSource=new MapSqlParameterSource();
+            parameterSource.addValue("merchanids", merchantMap.keySet());
+            namedParameterJdbcTemplate.query(query,parameterSource,(rs)->{
+                if(!rs.getString("NAME").equals("") && !rs.getString("MERCHANTID").equals("")) {
+                    String merchant = merchantMap.getOrDefault(rs.getInt("MERCHANTID"), rs.getString("MERCHANTID"));
+                    log.trace(merchantServices);
+                    if (merchantServices.has(merchant)) {
+                        merchantServices.put(merchant, merchantServices.getString(merchant) + "," + rs.getString("NAME"));
+                    } else {
+                        merchantServices.put(merchant, rs.getString("NAME"));
+                    }
+                }
+            });
+        }catch (Exception ex){
+            log.error(ex.getMessage());
+        }
+        log.trace(merchantServices);
+        return merchantServices;
     }
 
 

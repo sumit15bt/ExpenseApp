@@ -1,7 +1,19 @@
  ssh root@139.59.70.209 ---> kSheerdham@123Expense
 
 kSheerdham@123Expense
-------------------------------------------------- TODO
+------------------------------------------------- GIT 
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sumit15bt/ExpenseApp.git
+git push -u origin main
+------------------------------------------------------------
+
+
+
+
 
 
 1. add merchant in expense and expense date  seletion option. all changes
@@ -33,6 +45,26 @@ http://<ip>:8085/getAllMerchants GET request. all merchant detail
 http://<ip>:8085/getAllService GET request. to get all services irrespective of merchant.
 http://<ip>:8085/getMerchantServices GET request with parameter merchantName=<merchantName> to view services of particular merchant.
 http://<ip>:8085/getServiceDetail GET request with parameter serviceName=<serviceName> to view particular services
+
+
+http://<ip>:8085/addExpense [ POST]
+
+{
+  "title":"exTitle",
+  "merchantname":"merchant",
+  "servicename":"service",
+  "exdate":"2021-02-01 00:00:00",
+  "exentrydate":"2021-02-13 00:00:00",
+  "amountpaid":"5000",
+  "balancelefttopaid":"2000",
+  "paymenttype":"cash",
+  "selectpaymentmode":"UPI",
+  "paymentrefnumber":"XYZABC"
+}
+
+
+http://<ip>:8085/getExpenseSummary?date=    ==>[ GET ] pass blank when want all expenses including marchant & service with timeDetail
+http://<ip>:8085/getExpenseSummary?date=2021-01-13    ==>[ GET ] pass date when want all expenses including marchant & service with timeDetail of particular date
 ====================================================
 
 http://<ip>:8085/authenticate  for authentication

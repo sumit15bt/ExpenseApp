@@ -46,22 +46,20 @@ public class Expensedao {
                 return "Merchant Not found";
             }
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//            String checkAvailablity="SELECT title FROM expense WHERE title=:title AND serviceid=:serviceId AND merchantid=:merchantId";
-//            MapSqlParameterSource parameterSource=new MapSqlParameterSource();
-//            parameterSource.addValue("title",expense.getTitle());
-//            parameterSource.addValue("serviceId",serviceId);
-//            parameterSource.addValue("merchantId",merchantId);
-//            List<Map<String, Object>> nameAvailable = namedParameterJdbcTemplate.queryForList(checkAvailablity,parameterSource);
-//            log.info("nameAvailable   ----> {} {}",nameAvailable,nameAvailable.size());
-//            if(nameAvailable !=null && nameAvailable.size() > 0){
-//                return "This Expense Already Added for this service .!";
-//            }
+            String checkAvailablity="SELECT title FROM expense WHERE title=:title ";
+            MapSqlParameterSource parameterSource=new MapSqlParameterSource();
+            parameterSource.addValue("title",expense.getTitle());
+            List<Map<String, Object>> nameAvailable = namedParameterJdbcTemplate.queryForList(checkAvailablity,parameterSource);
+            log.info("nameAvailable   ----> {} {}",nameAvailable,nameAvailable.size());
+            if(nameAvailable !=null && nameAvailable.size() > 0){
+                return "This Expense Already Added Before .!";
+            }
             String createExpense="INSERT INTO expense(\n" +
                     "             title, serviceid,merchantid,  paymenttype, cost, \n" +
                     "            selectpaymentmode, amountpaid,balancelefttopaid,paymentrefnumber,expensedate,expenseentrydate) "+
                     "    VALUES (:title, :serviceid, :merchantId, :paymenttype, :cost,  :selectpaymentmode,:amountpaid,:balancelefttopaid ,:paymentrefnumber," +
                     " :expensedate, :expenseentrydate)";
-            MapSqlParameterSource parameterSource=new MapSqlParameterSource();
+//            MapSqlParameterSource parameterSource=new MapSqlParameterSource();
             parameterSource.addValue("title",expense.getTitle());
             parameterSource.addValue("serviceid",serviceId);
             parameterSource.addValue("merchantId",merchantId);
@@ -97,8 +95,9 @@ public class Expensedao {
             if(merchantId == null){
                 return "Merchant Not found";
             }
-            String updatedExpense="UPDATE  expense SET serviceid=:serviceid,merchantid=:merchantid ,paymenttype=:paymenttype, cost=:cost, selectpaymentmode=:selectpaymentmode, paymentrefnumber=:paymentrefnumber, lastupdated:lastupdated "+
-                    " where title=:title ";
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String updatedExpense="UPDATE  expense SET serviceid=:serviceid,merchantid=:merchantid ,paymenttype=:paymenttype, cost=:cost, selectpaymentmode=:selectpaymentmode, paymentrefnumber=:paymentrefnumber, lastupdated=:lastupdated "+
+                    ", expenseentrydate=:expenseentrydate , expensedate=:expensedate where title=:title ";
             MapSqlParameterSource parameterSource=new MapSqlParameterSource();
             parameterSource.addValue("title",expense.getTitle());
             parameterSource.addValue("serviceid",serviceId);
@@ -107,6 +106,8 @@ public class Expensedao {
             parameterSource.addValue("cost",expense.getCost());
             parameterSource.addValue("selectpaymentmode",expense.getSelectpaymentmode());
             parameterSource.addValue("paymentrefnumber",expense.getPaymentrefnumber());
+            parameterSource.addValue("expensedate",sdf.parse(expense.getExdate().trim()),Types.TIMESTAMP);
+            parameterSource.addValue("expenseentrydate",sdf.parse(expense.getExentrydate().trim()),Types.TIMESTAMP);
             parameterSource.addValue("lastupdated",new Date());
             int updated=namedParameterJdbcTemplate.update(updatedExpense,parameterSource);
             log.trace("inserted {}",updated);

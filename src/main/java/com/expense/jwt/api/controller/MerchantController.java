@@ -2,10 +2,15 @@ package com.expense.jwt.api.controller;
 import com.expense.jwt.api.beans.AuthRequest;
 import com.expense.jwt.api.beans.MServices;
 import com.expense.jwt.api.beans.Merchant;
+import com.expense.jwt.api.beans.Response;
 import com.expense.jwt.api.repository.MerchantDao;
 import com.expense.jwt.api.repository.Servicedao;
 import com.expense.jwt.api.util.JwtUtil;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -48,7 +53,7 @@ public class MerchantController {
         return "BACKEND API working fine !!";
     }
 
-//    {"userName": "15btcse065@gmail.com",
+    //    {"userName": "15btcse065@gmail.com",
 //            "password":"sumit"}
     @PostMapping("/authenticate")
     public String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
@@ -64,12 +69,12 @@ public class MerchantController {
     }
 
     @GetMapping("/getMerchantServices")
-    public String getMerchantDetails(@RequestParam("merchantName") String merchantName) throws InterruptedException, ExecutionException{
-        log.info("get_merchant-------------------> {} ",merchantName);
-        String allServices="";
+    public String getMerchantDetails(@RequestParam("merchantName") String merchantName) throws InterruptedException, ExecutionException {
+        log.info("get_merchant-------------------> {} ", merchantName);
+        String allServices = "";
         try {
-            allServices=servicedao.getService(null,merchantName);
-        }catch (Exception ex){
+            allServices = servicedao.getService(null, merchantName);
+        } catch (Exception ex) {
             log.error(ex.getMessage());
         }
         log.trace(allServices.toString());
@@ -77,37 +82,58 @@ public class MerchantController {
     }
 
     @GetMapping("/getAllMerchantANDServices")
-    public Map<String, List<MServices>> getAllMerchantANDServices() {
+    public String getAllMerchantANDServices() {
         log.info("getAllMerchantANDServices-------------------> {} ");
-        Map<String, List<MServices>> allServices=new HashMap();
+        JSONObject jsonObject=new JSONObject();
         try {
-            allServices=merchantDao.getAllMerchantAndServices();
-        }catch (Exception ex){
+            jsonObject.put("merchantANDServices",merchantDao.getAllMerchantAndServices());
+        } catch (Exception ex) {
             log.error(ex.getMessage());
         }
-        log.trace(allServices.toString());
-        return allServices;
+        return jsonObject.toString();
     }
 
     @GetMapping("/getAllMerchants")
     public String getAllMerchants() {
         log.info("getAllMerchantANDServices-------------------> {} ");
-        String allMerchant= "";
+        JSONObject jsonObject=new JSONObject();
+        JSONArray merchantObjectAll = new JSONArray();
         try {
-            allMerchant=merchantDao.getAllMerchants();
-        }catch (Exception ex){
+            List<Merchant> allMerchants = merchantDao.getAllMerchants();
+            for (Merchant merchant : allMerchants) {
+                JSONObject merchantObject = new JSONObject();
+                merchantObject.put("id", merchant.getId());
+                merchantObject.put("name", merchant.getId());
+                merchantObject.put("primarycontactno", merchant.getId());
+                merchantObject.put("secondarycontactno", merchant.getId());
+                merchantObject.put("gstno", merchant.getId());
+                merchantObject.put("address", merchant.getId());
+                merchantObject.put("state", merchant.getId());
+                merchantObject.put("cityname", merchant.getId());
+                merchantObject.put("pincode", merchant.getId());
+                merchantObject.put("accountholdername", merchant.getId());
+                merchantObject.put("accountno", merchant.getId());
+                merchantObject.put("bankname", merchant.getId());
+                merchantObject.put("ifsccode", merchant.getId());
+                merchantObject.put("entrydate", merchant.getId());
+                merchantObject.put("lastupdated", merchant.getId());
+                merchantObjectAll.put(merchantObject);
+            }
+        } catch (Exception ex) {
             log.error(ex.getMessage());
         }
-        return allMerchant;
+        log.trace(merchantObjectAll.toString());
+        jsonObject.put("merchants",merchantObjectAll);
+        return jsonObject.toString();
     }
 
     @PostMapping("/createMerchant")
-    public String createMerchant(@RequestBody Merchant merchantDetailBean ) throws InterruptedException, ExecutionException {
-        log.info("create_merchant-------------------> {}",merchantDetailBean.toString());
-        String response="SOMETHING WENT WRONG ..!";
-        try{
-            response=merchantDao.createMerchant(merchantDetailBean);
-        }catch (Exception ex){
+    public String createMerchant(@RequestBody Merchant merchantDetailBean) throws InterruptedException, ExecutionException {
+        log.info("create_merchant-------------------> {}", merchantDetailBean.toString());
+        String response = "SOMETHING WENT WRONG ..!";
+        try {
+            response = merchantDao.createMerchant(merchantDetailBean);
+        } catch (Exception ex) {
             ex.printStackTrace(System.out);
         }
         return response;
@@ -116,28 +142,25 @@ public class MerchantController {
     @PostMapping("/updateMerchant")
     public String updateMerchant(@RequestBody Merchant merchantDetailBean) throws InterruptedException, ExecutionException {
         log.trace("update_merchant_Details------------------->");
-        String response="SOMETHING WENT WRONG ..!";
-        try{
-            response=merchantDao.updateMerchant(merchantDetailBean);
-        }catch (Exception ex){
+        String response = "SOMETHING WENT WRONG ..!";
+        try {
+            response = merchantDao.updateMerchant(merchantDetailBean);
+        } catch (Exception ex) {
             ex.printStackTrace(System.out);
         }
         return response;
     }
 
     @GetMapping("/deleteMerchant")
-    public String deleteMerchant(@RequestParam("merchantName") String merchantName){
+    public String deleteMerchant(@RequestParam("merchantName") String merchantName) {
         log.info("--------------/deleteMerchant-----------");
-        String response="SOMETHING WENT WRONG ..!";
-        try{
-            response=merchantDao.deleteMerchant(merchantName);
-        }catch (Exception ex){
+        String response = "SOMETHING WENT WRONG ..!";
+        try {
+            response = merchantDao.deleteMerchant(merchantName);
+        } catch (Exception ex) {
             log.error(ex.getMessage());
         }
         log.trace(response);
         return response;
     }
-
-    // TODO GET MERCHANT DETAIL PARTICULARLY AND ALL
-
 }
