@@ -2,6 +2,7 @@ package com.expense.jwt.api.controller;
 
 import com.expense.jwt.api.beans.Expense;
 import com.expense.jwt.api.beans.MServices;
+import com.expense.jwt.api.beans.RequestBean;
 import com.expense.jwt.api.repository.Expensedao;
 import com.expense.jwt.api.repository.MerchantDao;
 import com.expense.jwt.api.repository.Servicedao;
@@ -48,12 +49,12 @@ public class MerchantServicesController {
         return response;
     }
 
-    @GetMapping("/deleteService")
-    public String deleteService(@RequestParam("serviceName") String serviceName){
+    @PostMapping("/deleteService")
+    public String deleteService(@RequestBody RequestBean bean){
         log.info("--------------/deleteService-----------");
         String response="SOMETHING WENT WRONG ..!";
         try{
-            response=servicedao.deleteService(serviceName);
+            response=servicedao.deleteService(bean.getServiceName());
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
@@ -61,17 +62,17 @@ public class MerchantServicesController {
         return response;
     }
 
-    @GetMapping("/getExpensesOfService")
-    public String getExpensesOfService(@RequestParam("serviceName") String serviceName){
-        return expensedao.getExpense(null,serviceName,null,null);
+    @PostMapping("/getExpensesOfService")
+    public String getExpensesOfService(@RequestBody RequestBean bean){
+        return expensedao.getExpense(null,bean.getServiceName(),null,null);
     }
 
-    @GetMapping("/getServiceDetail")
-    public String getExpense(@RequestParam("serviceName") String serviceName){
+    @PostMapping("/getServiceDetail")
+    public String getExpense(@RequestBody RequestBean bean){
         log.info("--------------/deleteExpense-----------");
         String response="SOMETHING WENT WRONG ..!";
         try{
-            response=servicedao.getService(serviceName,null);
+            response=servicedao.getService(bean.getServiceName(),null);
         }catch (Exception ex){
             log.error(ex.getMessage());
         }

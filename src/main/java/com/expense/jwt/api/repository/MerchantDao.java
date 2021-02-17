@@ -58,20 +58,30 @@ public class MerchantDao {
             if(merchantMap.keySet().size() == 0) {
                 return  merchantServices;
             }
-            String query = "SELECT * FROM service WHERE merchantid IN (:merchanids)";
+
+            String query = "SELECT merchantid,name FROM service WHERE merchantid IN (:merchanids)";
             MapSqlParameterSource parameterSource=new MapSqlParameterSource();
             parameterSource.addValue("merchanids", merchantMap.keySet());
-            namedParameterJdbcTemplate.query(query,parameterSource,(rs)->{
-                if(!rs.getString("NAME").equals("") && !rs.getString("MERCHANTID").equals("")) {
-                    String merchant = merchantMap.getOrDefault(rs.getInt("MERCHANTID"), rs.getString("MERCHANTID"));
-                    log.trace(merchantServices);
-                    if (merchantServices.has(merchant)) {
-                        merchantServices.put(merchant, merchantServices.getString(merchant) + "," + rs.getString("NAME"));
-                    } else {
-                        merchantServices.put(merchant, rs.getString("NAME"));
+            List<Map<String,Object>> serviceList=namedParameterJdbcTemplate.queryForList(query,parameterSource);
+            for (Map.Entry<Integer, String> entry : merchantMap.entrySet()) {
+                Integer mid = entry.getKey();
+                String mName = entry.getValue();
+                log.trace("{} -> {}", mid, mName);
+                String services="";
+                if(!mName.equals("")){
+                    for (Map<String, Object> service : serviceList) {
+                        int serMerId=Integer.parseInt(service.get("MERCHANTID").toString());
+                        if(serMerId==mid){
+                            services+=service.get("NAME").toString()+",";
+                        }
+                    }
+                    if(services.contains(",")){
+                        merchantServices.put(mName,services.substring(0,services.length()-1));
+                    }else{
+                        merchantServices.put(mName,services);
                     }
                 }
-            });
+            }
         }catch (Exception ex){
             log.error(ex.getMessage());
         }

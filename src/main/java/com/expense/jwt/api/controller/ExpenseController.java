@@ -1,6 +1,7 @@
 package com.expense.jwt.api.controller;
 
 import com.expense.jwt.api.beans.Expense;
+import com.expense.jwt.api.beans.RequestBean;
 import com.expense.jwt.api.repository.Expensedao;
 import com.expense.jwt.api.service.ExpenseService;
 import lombok.extern.slf4j.Slf4j;
@@ -43,12 +44,12 @@ public class ExpenseController {
         return response;
     }
 
-    @GetMapping("/deleteExpense")
-    public String updateExpense(@RequestParam("expenseTitle") String expenseTitle){
+    @PostMapping("/deleteExpense")
+    public String updateExpense(@RequestBody RequestBean bean){
         log.info("--------------/deleteExpense-----------");
         String response="SOMETHING WENT WRONG ..!";
         try{
-            response=expensedao.deleteExpense(expenseTitle);
+            response=expensedao.deleteExpense(bean.getExpenseTitle());
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
@@ -56,12 +57,12 @@ public class ExpenseController {
         return response;
     }
 
-    @GetMapping("/getExpenseDetail")
-    public String getExpense(@RequestParam("expenseTitle") String expenseTitle){
+    @PostMapping("/getExpenseDetail")
+    public String getExpense(@RequestBody RequestBean bean){
         log.info("--------------/deleteExpense-----------");
         String response="SOMETHING WENT WRONG ..!";
         try{
-            response=expensedao.getExpense(expenseTitle,null,null,null);
+            response=expensedao.getExpense(bean.getExpenseTitle(),null,null,null);
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
@@ -69,10 +70,10 @@ public class ExpenseController {
         return response;
     }
 
-    @GetMapping("/getExpenseSummary") ////yyyy-MM-dd format
-    public String getExpenseSummary(@RequestParam("date") String date){
-        log.trace("getExpenseSummary date -> {}",date);
-        return expenseService.expenseSummary(date);
+    @PostMapping("/getExpenseSummary") ////yyyy-MM-dd format
+    public String getExpenseSummary(@RequestBody RequestBean bean){
+        log.trace("getExpenseSummary date -> {}",bean.getDate());
+        return expenseService.expenseSummary(bean.getDate());
     }
 
     @GetMapping("/getAllExpense")
@@ -87,5 +88,4 @@ public class ExpenseController {
         log.trace(response);
         return response;
     }
-
 }
