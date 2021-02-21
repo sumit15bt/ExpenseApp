@@ -5,6 +5,9 @@ import com.expense.jwt.api.beans.MServices;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import lombok.extern.log4j.Log4j2;
+import netscape.javascript.JSObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -50,37 +53,42 @@ public class Servicedao {
     }
 
 
-    public String getService(String serviceName,String merchantName){
-        JsonArray allServices = new JsonArray();
+    public JSONArray getService(String serviceName,String merchantName){
+        JSONArray allServices = new JSONArray();
         try{
             Map<Integer,String> merchantmap=merchantDao.getMerchantIdNameMap();
-            String expenseQuery="SELECT * from service";
+            String serviceQuery="SELECT * from service";
             if(serviceName !=null && !serviceName.equals("")){
-                expenseQuery+=" where name='"+serviceName+"'";
+                serviceQuery+=" where name='"+serviceName+"'";
             }
             if(merchantName !=null && !merchantName.equals("")){
                 Integer merchanId=merchantDao.getMerchantId(merchantName);
-                expenseQuery+=" where merchantid='"+merchanId+"'";
+                log.trace("merchantname merchantid {}",merchantName ,merchanId);
+                serviceQuery+=" where merchantid='"+merchanId+"'";
             }
-            List<MServices> expensesDone=jdbcTemplate.query(expenseQuery, new BeanPropertyRowMapper<>(MServices.class));
+            log.trace(serviceQuery);
+            List<MServices> expensesDone=jdbcTemplate.query(serviceQuery, new BeanPropertyRowMapper<>(MServices.class));
+
+            log.debug("expensesDone {}",expensesDone);
+            log.debug("expensesDone {}",expensesDone.size());
             expensesDone.forEach((service)->{
-                JsonObject serviceData = new JsonObject();
-                serviceData.addProperty("name", service.getName());
-                serviceData.addProperty("merchantname", merchantmap.getOrDefault(service.getMerchantid(),"SERVICE NOT AVAILABLE"));
-                serviceData.addProperty("price", service.getPrice());
-                serviceData.addProperty("tax_gst_percentage", service.getTax_gst_percentage());
-                serviceData.addProperty("description",service.getDescription());
-                serviceData.addProperty("otherdetails", service.getOtherdetails());
-                serviceData.addProperty("entrydate", service.getEntrydate().toString());
+                JSONObject serviceData = new JSONObject();
+                serviceData.put("name", service.getName());
+                serviceData.put("merchantname", merchantmap.getOrDefault(service.getMerchantid(),"SERVICE NOT AVAILABLE"));
+                serviceData.put("price", service.getPrice());
+                serviceData.put("tax_gst_percentage", service.getTax_gst_percentage());
+                serviceData.put("description",service.getDescription());
+                serviceData.put("otherdetails", service.getOtherdetails());
+                serviceData.put("entrydate", service.getEntrydate().toString());
                 if(service.getLastupdated()!=null) {
-                    serviceData.addProperty("lastupdated", service.getLastupdated().toString());
+                    serviceData.put("lastupdated", service.getLastupdated().toString());
                 }
-                allServices.add(serviceData);
+                allServices.put(serviceData);
             });
         }catch(Exception ex){
-            log.error("ERROR : {}",ex.getMessage());
+            log.error("ERROR : {}",ex);
         }
-        return allServices.toString();
+        return allServices;
     }
 
 

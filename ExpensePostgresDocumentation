@@ -1,6 +1,10 @@
  ssh root@139.59.70.209 ---> kSheerdham@123Expense
 
 kSheerdham@123Expense
+
+
+
+rsync -zhP expense.jar root@139.59.70.209:/home/work/
 ------------------------------------------------- GIT 
 
 git init

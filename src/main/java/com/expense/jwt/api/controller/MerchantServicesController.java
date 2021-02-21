@@ -7,6 +7,7 @@ import com.expense.jwt.api.repository.Expensedao;
 import com.expense.jwt.api.repository.MerchantDao;
 import com.expense.jwt.api.repository.Servicedao;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,32 +65,31 @@ public class MerchantServicesController {
 
     @PostMapping("/getExpensesOfService")
     public String getExpensesOfService(@RequestBody RequestBean bean){
-        return expensedao.getExpense(null,bean.getServiceName(),null,null);
+        JSONObject jsonObject=new JSONObject();
+        return jsonObject.put("expenses",expensedao.getExpense(null,bean.getServiceName(),null,null)).toString();
     }
 
     @PostMapping("/getServiceDetail")
     public String getExpense(@RequestBody RequestBean bean){
         log.info("--------------/deleteExpense-----------");
-        String response="SOMETHING WENT WRONG ..!";
+        JSONObject response=new JSONObject();
         try{
-            response=servicedao.getService(bean.getServiceName(),null);
+            response=response.put("services",servicedao.getService(bean.getServiceName(),null));
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
-        log.trace(response);
-        return response;
+        return response.toString();
     }
 
     @GetMapping("/getAllService")
     public String getAllExpense(){
         log.info("--------------/deleteExpense-----------");
-        String response="SOMETHING WENT WRONG ..!";
+        JSONObject response=new JSONObject();
         try{
-            response=servicedao.getService(null,null);
+            response.put("services",servicedao.getService(null,null));
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
-        log.trace(response);
-        return response;
+        return response.toString();
     }
 }

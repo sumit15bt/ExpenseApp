@@ -67,15 +67,15 @@ public class MerchantController {
 
     @PostMapping("/getMerchantServices")
     public String getMerchantDetails(@RequestBody RequestBean bean) throws InterruptedException, ExecutionException {
-        log.info("get_merchant-------------------> {} ", bean.getMerchantName());
-        String allServices = "";
+        log.info("get_merchant_services-------------------> {} ", bean.getMerchantName());
+        JSONObject allServices=new JSONObject();
         try {
-            allServices = servicedao.getService(null, bean.getMerchantName());
+            allServices.put("merchantServices",servicedao.getService(null, bean.getMerchantName()));
         } catch (Exception ex) {
             log.error(ex.getMessage());
         }
         log.trace(allServices.toString());
-        return allServices;
+        return allServices.toString();
     }
 
     @GetMapping("/getAllMerchantANDServices")

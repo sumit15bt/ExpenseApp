@@ -5,6 +5,7 @@ import com.expense.jwt.api.beans.RequestBean;
 import com.expense.jwt.api.repository.Expensedao;
 import com.expense.jwt.api.service.ExpenseService;
 import lombok.extern.slf4j.Slf4j;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,32 +61,31 @@ public class ExpenseController {
     @PostMapping("/getExpenseDetail")
     public String getExpense(@RequestBody RequestBean bean){
         log.info("--------------/deleteExpense-----------");
-        String response="SOMETHING WENT WRONG ..!";
+        JSONObject response=new JSONObject();
         try{
-            response=expensedao.getExpense(bean.getExpenseTitle(),null,null,null);
+            response=response.put("expenses",expensedao.getExpense(bean.getExpenseTitle(),null,null,null));
         }catch (Exception ex){
             log.error(ex.getMessage());
         }
-        log.trace(response);
-        return response;
+        return response.toString();
     }
 
     @PostMapping("/getExpenseSummary") ////yyyy-MM-dd format
     public String getExpenseSummary(@RequestBody RequestBean bean){
         log.trace("getExpenseSummary date -> {}",bean.getDate());
-        return expenseService.expenseSummary(bean.getDate());
+        JSONObject response=new JSONObject();
+        return response.put("expenseSummary",expenseService.expenseSummary(bean.getDate())).toString();
     }
 
     @GetMapping("/getAllExpense")
     public String getAllExpense(){
         log.info("--------------/getAllExpense-----------");
-        String response="SOMETHING WENT WRONG ..!";
+        JSONObject allExpense=new JSONObject();
         try{
-            response=expensedao.getExpense(null,null,null,null);
+            allExpense.put("expenses",expensedao.getExpense(null,null,null,null));
         }catch (Exception ex){
-            log.error(ex.getMessage());
+            log.error("ERROR : {}",ex);
         }
-        log.trace(response);
-        return response;
+        return allExpense.toString();
     }
 }

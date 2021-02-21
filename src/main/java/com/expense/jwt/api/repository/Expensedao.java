@@ -4,6 +4,8 @@ import com.expense.jwt.api.beans.Expense;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import lombok.extern.log4j.Log4j2;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -122,8 +124,8 @@ public class Expensedao {
 
 
 
-    public String getExpense(String expenseTitle,String servicename,String merchantname,String expensedate){
-        JsonArray allExpense = new JsonArray();
+    public JSONArray getExpense(String expenseTitle,String servicename,String merchantname,String expensedate){
+        JSONArray allExpense = new JSONArray();
         try{
             Map<Integer,String> servicemap=servicedao.getServiceIdNameMap();
             Map<Integer,String> merchnatmap=merchantDao.getMerchantIdNameMap();
@@ -132,28 +134,28 @@ public class Expensedao {
             if(expensesDone!=null && expensesDone.size()>0) {
                 log.trace(expensesDone);
                 expensesDone.forEach((expensee) -> {
-                    JsonObject expense = new JsonObject();
-                    expense.addProperty("title", expensee.getTitle());
-                    expense.addProperty("merchantname", merchnatmap.getOrDefault(expensee.getMerchantid(), "MERCHANT NOT AVAILABLE"));
-                    expense.addProperty("servicename", servicemap.getOrDefault(expensee.getServiceid(), "SERVICE NOT AVAILABLE"));
-                    expense.addProperty("expensedate", dateFormatter.format( expensee.getExpensedate()));
-                    expense.addProperty("paymenttype", expensee.getPaymenttype());
-                    expense.addProperty("cost", expensee.getCost());
-                    expense.addProperty("selectpaymentmode", expensee.getSelectpaymentmode());
-                    expense.addProperty("paymentrefnumber", expensee.getPaymentrefnumber());
-                    expense.addProperty("amountpaid", expensee.getAmountpaid());
-                    expense.addProperty("balancelefttopaid", expensee.getBalancelefttopaid());
-                    expense.addProperty("expenseentrydate", dateFormatter.format(expensee.getExpenseentrydate()));
+                    JSONObject expense = new JSONObject();
+                    expense.put("title", expensee.getTitle());
+                    expense.put("merchantname", merchnatmap.getOrDefault(expensee.getMerchantid(), "MERCHANT NOT AVAILABLE"));
+                    expense.put("servicename", servicemap.getOrDefault(expensee.getServiceid(), "SERVICE NOT AVAILABLE"));
+                    expense.put("expensedate", dateFormatter.format( expensee.getExpensedate()));
+                    expense.put("paymenttype", expensee.getPaymenttype());
+                    expense.put("cost", expensee.getCost());
+                    expense.put("selectpaymentmode", expensee.getSelectpaymentmode());
+                    expense.put("paymentrefnumber", expensee.getPaymentrefnumber());
+                    expense.put("amountpaid", expensee.getAmountpaid());
+                    expense.put("balancelefttopaid", expensee.getBalancelefttopaid());
+                    expense.put("expenseentrydate", dateFormatter.format(expensee.getExpenseentrydate()));
                     if (expensee.getLastupdated() != null) {
-                        expense.addProperty("lastupdated", dateFormatter.format(expensee.getLastupdated()));
+                        expense.put("lastupdated", dateFormatter.format(expensee.getLastupdated()));
                     }
-                    allExpense.add(expense);
+                    allExpense.put(expense);
                 });
             }
         }catch(Exception ex){
             log.error("ERROR : {}",ex.getMessage());
         }
-        return allExpense.toString();
+        return allExpense;
     }
     public List<Expense> getExpenseList(String expenseTitle,String servicename,String merchantname,String expensedate){
         List<Expense> expensesDone=null;
