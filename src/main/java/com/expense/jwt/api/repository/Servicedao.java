@@ -5,7 +5,6 @@ import com.expense.jwt.api.beans.MServices;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import lombok.extern.log4j.Log4j2;
-import netscape.javascript.JSObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
